@@ -1,0 +1,17 @@
+@media screen and (max-width:992px) {
+    
+    .navbar-collapse{
+        justify-content:flex-start !important;
+        background-color: #fff;
+        height: 85vh;
+        align-items: flex-start;
+        overflow: hidden;
+       
+    }
+    .navbar-collapse a{
+        color:#555 !important;
+    }
+    .content span{
+        line-height: 1.8;
+    }
+}
