@@ -284,8 +284,18 @@ progress{
     background-color: #fff;
 }
 .blog .blog-footer{
-    background-color: #eee;
+    background-color: rgba(0,0,0,.03);
     border:1px solid #DDD
+
+}
+.blog .blog-footer .user-info{
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function:linear;
+    cursor: pointer;
+}
+.blog .blog-footer .user-info:hover{
+    color:#0078ff;
 
 }
 .contact{
