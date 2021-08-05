@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/media.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark position-fixed w-100">
@@ -450,10 +451,53 @@
             </div>
           </div>
         </section>
+          
+
+ 
 
         <section class="feedback my-5 by-5 w-100  position-relative">
-          <div class="layer w-100 h-100"></div>
-        
+          <div class="layer w-100 h-100">
+
+          </div>
+                 <div class="swiper-container mySwiper ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              
+              <div class="d-flex align-items-center flex-column container">
+                  <div class="client-img my-3">
+                    <img class="" alt=""  height="150" src="images/testimonial-2.jpg">
+                  </div>
+                  <div class="client-info mb-5">
+                    <h4 class="font-weight-bold">Xavi Alonso</h4>
+                    <p class="lead">
+
+                      Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum <br> dolor sit amet,
+                      consectetur adipiscing elit.
+                    
+                    </p>
+                  </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="client-img my-3">
+                  <img class="" alt="" src="images/testimonial-4.jpg">
+                </div>
+                <div class="client-info mb-5">
+                  <h4 class="font-weight-bold">Marta Socrate</h4>
+                  <p  class="lead">
+
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum <br> dolor sit amet,
+                    consectetur adipiscing elit.
+                  
+                  </p>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
         </section>
 
         <section class="blogs">
@@ -697,7 +741,9 @@
         </footer>
         
         <script src="JS/typed.js@2.0.12"></script>
+        <script src="JS/jquery-3.5.1.slim.min.js"></script>
         <script src="JS/bootstrap.bundle.min.js"></script>
+        <script src="JS/swiper-bundle.min.js"></script>
         <script>
           var typed = new Typed('.animate', {
             strings: ["Developer" ,"Designer", "Photographer" , "Freelancer"],
@@ -705,6 +751,15 @@
             backSpeed: 80 ,
             loop: true
           });
+              </script>
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  spaceBetween: 30,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                });
               </script>
         <script src="JS/script.js"></script>
     </body>
