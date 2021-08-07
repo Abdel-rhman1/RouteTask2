@@ -6,9 +6,7 @@ var prev = document.getElementById("prev");
 var next = document.getElementById("next");
 var currentImg;
 console.log(imgs);
-close.addEventListener("click" , function(){
-    lightBoxContainer.style.display = "none";
-});
+
 
 for(let i = 0;i<imgs.length ;i++){
     imgs[i].addEventListener("click" , function(eventInfo){
@@ -21,10 +19,27 @@ for(let i = 0;i<imgs.length ;i++){
     });
 }
 
+close.addEventListener("click" , closeSlid);
 
 
+function closeSlid(){
+    lightBoxContainer.style.display = "none";
+}
 
-prev.addEventListener("click" , function(){
+
+document.body.addEventListener("keydown" , function(evetntInfo){
+    console.log(evetntInfo);
+    if(evetntInfo.code == "ArrowLeft"){
+        prevSlid();
+    }else if(evetntInfo.code == "ArrowRight"){
+        nextSlid();
+    }else if(evetntInfo.code == "Escape"){
+        closeSlid();
+    }
+});
+
+prev.addEventListener("click" , prevSlid);
+function prevSlid(){
     if(currentImg!=0){
         var srcImg =  imgs[currentImg-1];
         currentImg--;
@@ -32,14 +47,16 @@ prev.addEventListener("click" , function(){
 
         console.log(srcImg.getAttribute("src"));
     }
-   
-});
-next.addEventListener("click" , function(){
+}
+
+
+
+next.addEventListener("click" , nextSlid);
+function nextSlid(){
     if(currentImg!=imgs.length-1){
         var srcImg = imgs[currentImg+1];
         currentImg++;
         lightBoxItem.style.backgroundImage  = `url(${srcImg.src})`;
         console.log(srcImg.getAttribute("src"));
     }
-   
-});
+}
