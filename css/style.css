@@ -363,3 +363,21 @@ progress{
     color:#fff;
     font-size: 18px;
 }
+.moveToTop{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: blue;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 4;
+    transition-property: display;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
+}
