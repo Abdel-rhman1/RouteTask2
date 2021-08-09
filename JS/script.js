@@ -17,7 +17,9 @@ for(let i = 0;i<imgs.length ;i++){
         currentImg = i;
         console.log(currentImg);
         lightBoxItem.style.backgroundImage = `url(${srcImg})`;
+
         lightBoxContainer.style.display = "flex";
+        // lightBoxContainer.focus;
     });
 }
 
@@ -29,7 +31,7 @@ function closeSlid(){
 }
 
 document.addEventListener("scroll" , function(){
-    console.log(scrollY);
+    //console.log(scrollY);
     if(scrollY > 200){
         moveToUp.style.display = "flex";
     }
@@ -38,9 +40,8 @@ document.addEventListener("scroll" , function(){
     }
 });
 document.addEventListener("scroll" , function(){
-    console.log("Enter The Two");
-    if(scrollY > 200){
-        
+    //console.log("Enter The Two");
+    if(scrollY > 200){  
         navbar.classList.remove("bg-transparent");
         navbar.style.backgroundColor = "#4e4e4e !important";
     }else{
@@ -48,11 +49,14 @@ document.addEventListener("scroll" , function(){
     }
 });
 moveToUp.addEventListener("click" , function(){
-    console.log("Clicking On its");
-    window.scrollTo(0,0);
+    //console.log("Clicking On its");
+    window.scrollTo({
+        top: 0,
+        left:0,
+        behavior: 'smooth'});
 });
 document.body.addEventListener("keydown" , function(evetntInfo){
-    console.log(evetntInfo);
+    //console.log(evetntInfo);
     if(evetntInfo.code == "ArrowLeft"){
         prevSlid();
     }else if(evetntInfo.code == "ArrowRight"){
@@ -69,7 +73,7 @@ function prevSlid(){
         currentImg--;
         lightBoxItem.style.backgroundImage  = `url(${srcImg.src})`;
 
-        console.log(srcImg.getAttribute("src"));
+       // console.log(srcImg.getAttribute("src"));
     }
 }
 
@@ -81,6 +85,11 @@ function nextSlid(){
         var srcImg = imgs[currentImg+1];
         currentImg++;
         lightBoxItem.style.backgroundImage  = `url(${srcImg.src})`;
-        console.log(srcImg.getAttribute("src"));
+        //console.log(srcImg.getAttribute("src"));
     }
 }
+
+
+lightBoxItem.addEventListener("blur" , function(){
+    //console.log("clicking On Container");
+});
