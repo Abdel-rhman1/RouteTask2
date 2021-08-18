@@ -17,7 +17,7 @@ nav{
     z-index: 99999999999999999999999999999;
 }
 nav .active{
-    border-bottom: 2px solid #fff !important;
+    border-bottom: 2px solid #fff;
 }
 nav a{
     color:white !important;
@@ -33,9 +33,15 @@ nav a{
     position: relative;
     overflow: hidden;
 }
+
+li{
+    transition: all 1s;
+}
+
 nav li p{
     position: absolute;
 }
+
 nav li:hover p{
     width:100% !important;
     height: 4px;

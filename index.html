@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/media.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+        <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
     </head>
     <body>
@@ -17,27 +18,27 @@
               <div class="collapse navbar-collapse  px-3" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                   <li class="nav-item mb-md-2 mx-2 ">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" id="homeTab" aria-current="page" href="#">Home</a>
                     <p class="borderanimation w-100" style="height: 2px;">
 
                     </p>
                   </li>
                   <li class="nav-item mb-md-2 mx-2">
-                    <a class="nav-link" href="#about">ABOUT</a>
+                    <a class="nav-link" href="#about" id="about">ABOUT</a>
                     <p class="borderanimation" style="height: 2px;">
                   </li>
                   <li class="nav-item  mb-md-2 mx-2">
-                    <a class="nav-link" href="#service">
+                    <a class="nav-link" href="#service" id="serviceTab">
                       SERVICES
                     </a>
                     <p class="borderanimation" style="height: 2px;"></p>
                   </li>
                   <li class="nav-item mb-md-2 mx-2">
-                    <a class="nav-link" href="#work">WORK</a>
+                    <a class="nav-link" href="#work" id="workTab">WORK</a>
                     <p class="borderanimation" style="height: 2px;">
                   </li>
                   <li class="nav-item mb-md-2 mx-2">
-                    <a class="nav-link" href="#blog">BLOG</a>
+                    <a class="nav-link" href="#blog" id="blogTab">BLOG</a>
                     <p class="borderanimation" style="height: 2px;">
                   </li>
                   <li class="nav-item dropdown mb-md-2 mx-2">
@@ -79,7 +80,7 @@
           </div>
         </section>
 
-        <section class="container about mt-5  w-100 p-5" id="about">
+        <section class="container about mt-5  w-100 p-5" id="aboutSection">
             <div class="row">
                 <div class="col-md-6 col-sm-12 d-flex justify-content-start">
                     <div class="row justify-content-around my-sm-3">
@@ -312,7 +313,7 @@
           </div>
         </section>
 
-        <section class="portofailo my-5">
+        <section class="portofailo my-5" id="portofailoSection">
           <div class="container">
             <div class="portohead text-center mb-4">
               <h2 class="font-weight-bolder">PORTFOLIO</h2>
